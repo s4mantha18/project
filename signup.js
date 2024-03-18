@@ -1,34 +1,39 @@
-// Initialize an empty array to store user information
-window.users = [];
+// Load users array from local storage on page load
+var users = JSON.parse(localStorage.getItem('users')) || [];
 
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Get the username and password from the sign-up form
+// Function to handle form submission
+function handleFormSubmission(event) {
+    event.preventDefault(); // Prevent form submission from reloading the page
+    
+    // Get input values
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-
-    // Create a new user object
-    var newUser = {
+    
+    // Create an object to represent the user
+    var user = {
         username: username,
         password: password
     };
-
-    // Push the new user object to the users array
-    users.push(newUser);
-    // Store users array in localStorage
+    
+    // Push the user object into the users array
+    users.push(user);
+    
+    // Save updated users array to local storage
     localStorage.setItem('users', JSON.stringify(users));
-
-
-    // Optionally, you can store the users array in localStorage or a backend server for persistence
-
-    // Reset the sign-up form fields
+    
+    // Clear the form fields after submission (optional)
     document.getElementById('username').value = '';
     document.getElementById('password').value = '';
-
-    // Display a success message
+    
+    // Display a message or perform any other actions as needed
     document.getElementById('signupMessage').innerText = 'Sign up successful!';
+    setTimeout(function() {
+        window.location.href = 'index.html';
+    }, 2000);
+    
+    // For demonstration purposes, log the users array
+    console.log(users);
+}
 
-    // Debug: Display the current state of the users array
-    console.log('Users:', users);
-});
+// Add event listener to the form for form submission
+document.getElementById('signupForm').addEventListener('submit', handleFormSubmission);

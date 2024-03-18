@@ -18,6 +18,11 @@ document.getElementById('signinForm').addEventListener('submit', function(event)
         if (user) {
             // Authentication successful
             document.getElementById('signinMessage').innerText = 'Login successful!';
+            // Show notification
+            showNotification('Login Successful', 'Welcome back, ' + username + '!');
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 2000);
         } else {
             // Authentication failed
             document.getElementById('signinMessage').innerText = 'Login failed. Incorrect username or password.';
@@ -27,3 +32,20 @@ document.getElementById('signinForm').addEventListener('submit', function(event)
         document.getElementById('signinMessage').innerText = 'No user data found. Please sign up first.';
     }
 });
+
+function showNotification(title, message) {
+    // Check if the browser supports notifications
+    if (!("Notification" in window)) {
+        alert("This browser does not support system notifications");
+    } else if (Notification.permission === "granted") { // Check if permission is already granted
+        // If it's okay let's create a notification
+        new Notification(title, { body: message });
+    } else if (Notification.permission !== 'denied') { // Otherwise, we need to ask for permission
+        Notification.requestPermission().then(function (permission) {
+            // If the user accepts, let's create a notification
+            if (permission === "granted") {
+                new Notification(title, { body: message });
+            }
+        });
+    }
+}

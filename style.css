@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
 .maincontainer{
-    overflow-x: hidden;
     width: 100%;
 }
 
@@ -56,6 +56,7 @@
 .body{
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 
@@ -78,12 +79,11 @@
     animation-play-state: running;
     color: white;
     text-align: center;
-    
+    width: 500px; 
+    overflow-y: hidden; 
 }
 
-.name:hover{
-    text-shadow: 0 0 8px rgb(222, 222, 222);
-}
+
 
 #slide2{
     display: flex;
@@ -92,7 +92,6 @@
 }
 
 .maincontainer{
-    width: 100vw;
     height: 100vh;
     background-color: black;
     display: flex;
@@ -189,6 +188,7 @@
 .body3{
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .slide3 {
@@ -218,6 +218,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .name3 {
@@ -242,6 +243,7 @@
     gap: 40px;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 
@@ -418,6 +420,7 @@ p{
     justify-content: center;
     align-items: center;
     background-color: #c5a888;
+    flex-direction: column;
     
 }
 
@@ -456,6 +459,7 @@ p{
     width: 100%;
     height: 300px;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .package{
@@ -486,8 +490,8 @@ p{
     z-index: 2;
     animation-play-state: paused;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
     gap: 40px;
     overflow-x: hidden;
 }
@@ -534,7 +538,7 @@ span{
 
 .pickaclass{
     background-color: #995448;
-    height: 250px;
+    height: 90px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -552,7 +556,7 @@ span{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: #995448;
-    height: 540px;
+    height: 200px;
     text-align: justify;
     font-size: 20px;
     display: flex;
@@ -564,12 +568,6 @@ span{
 }
 
 
-.firstheader{
-    display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
 
 .navpart{
     display: flex;
@@ -638,9 +636,698 @@ a{
     text-decoration: none;
 }
 
-.buttons button:active {
-    background-color: ;
+
+.footerbottom{
+    display: block;
 }
+
+footer{
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+}
+
+/* Footer Styles */
+footer {
+    color: black;
+    padding: 20px 0;
+  }
+
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 19px;
+  }
+  
+  .footer-bottom pre {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .maincontainer{
+        width: 100%;
+    }
+    
+    
+    .contentcontainer{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
+    .slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        animation: slideinopacity 1s cubic-bezier(0, 0.5, 0.14, 0.95);
+    }
+    
+    
+    .slide::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .header{
+        width: 280px;
+        height: 50px;
+        background-color: rgb(159, 138, 96);
+        animation: slideinopacity2 1.5s cubic-bezier(0, 0.5, 0.14, 0.95); 
+        position: relative;
+        z-index: 2;  
+    }
+    
+    .body{
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+    }
+    
+    
+    .info{
+        color: rgb(255, 217, 141);
+        padding-left: 80px;
+        font-family: "Hind", sans-serif;
+        animation: slideinopacity4 1s cubic-bezier(0, 0.83, 0.14, 0.95);
+        text-align: center;
+    }
+    
+    .name{
+        font-family: "Hind", sans-serif;
+        padding-top: 10px;
+        padding-left: 30px;
+        font-style: italic;
+        font-size: 30px;
+        cursor: pointer;
+        white-space: nowrap;
+        animation: slideinopacity3 1s cubic-bezier(0, 0.5, 0.14, 0.95);
+        animation-play-state: running;
+        color: white;
+        text-align: center;
+        width: 500px; 
+        overflow-y: hidden; 
+    }
+    
+    
+    
+    #slide2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .maincontainer{
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    
+    
+    
+    .dots{
+        position: absolute;
+        bottom: 40px;
+        left: 41%;
+        text-align: center;
+        z-index: 1;
+        animation: zoomout 1s cubic-bezier(0, 0.75, 0.14, 0.95);
+    }
+    
+    .dot{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        
+    }
+    
+    .dot.active{
+        background-color: white;
+    }
+    
+    
+    
+    
+    
+    .header2{
+        width: 350px;
+        height: 100%;
+        background-color: rgba(97, 83, 55, 0.462);
+        animation: slideopacity 1.5s cubic-bezier(0, 0.5, 0.14, 0.95);
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .body2{
+        position: relative;
+        z-index: 2;
+    }
+    
+    .name2{
+        font-family: "Hind", sans-serif;
+        font-style: italic;
+        font-size: 40px;
+        cursor: pointer;
+        white-space: nowrap;
+        animation: slideopacity 1s cubic-bezier(0, 0.5, 0.14, 0.95);
+        animation-play-state: running;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    .info2{
+        color: rgb(255, 217, 141);
+        font-family: "Hind", sans-serif;
+        animation: slideinopacity4 1s cubic-bezier(0, 0.83, 0.14, 0.95);
+        font-size: 8px; 
+        text-align: center; 
+        padding-left: 160px;
+        font-weight: bold;
+        overflow:visible;
+         
+    }
+    
+    .body3{
+        position: relative;
+        z-index: 2;
+    }
+    
+    .slide3 {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header3 {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        width: 350px;
+        height: 100%;
+        background-color: rgba(97, 83, 55, 0.462);
+        animation: slideinopacity2 1.5s cubic-bezier(0, 0.5, 0.14, 0.95);
+        position: relative;
+        z-index: 2;
+    }
+    
+    .body3 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .name3 {
+        padding-top: 80px;
+        font-size: 40px;
+        margin-bottom: 8px;
+        font-family: "Hind", sans-serif;
+        font-style: italic;
+        cursor: pointer;
+        white-space: nowrap;
+        animation: slideopacity 1s cubic-bezier(0, 0.5, 0.14, 0.95);
+        animation-play-state: running;
+        color: white;
+    }
+    
+    .info3 {
+        font-size: 1.2em;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction:column;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    
+    .awardimage{
+        width: 250px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 2px;
+        
+    }
+    
+    
+    
+    .awardimage:hover{
+        animation: secondscale 1s cubic-bezier(0, 0.5, 0.14, 0.95);
+    }
+    .awardimage:hover{
+        opacity: 0.9;
+    }
+    
+    .awardimage:hover p{
+        display: block;
+    }
+    
+    p{
+        color: rgb(255, 255, 255);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+       text-shadow: 1px 1px 10px black;
+       display: none;
+       z-index: 2;
+    }
+    
+    .slide.active{
+        display: block;
+    }
+    
+    /* KEYFRAMES */
+    
+    @keyframes slideinopacity4 {
+        from{
+            opacity: 0;
+            transform: translateX(150px);
+        }
+    
+        to{
+            opacity: 1;
+            transform: translateX(0); 
+        }
+    }
+    
+    @keyframes opacitydown {
+        from{
+            opacity: 1;
+        }
+    
+        to{
+            opacity: 0.2;
+        }
+    }
+    
+    @keyframes position {
+        from{
+            transform: translateY(-20px);
+        }
+        to{
+            transform: translateY(20px);
+        }
+    }
+    
+    @keyframes opacity {
+        from{
+            opacity: 0;
+        }
+    
+        to{
+            opacity: 1;
+        }
+    }
+    
+    @keyframes secondscale {
+        from{
+         transform: scale(1);
+        } 
+        to{
+         transform: scale(1.1);
+        }
+     }
+    
+     @keyframes slideopacity {
+        from{
+            transform: translateX(135px);
+        }
+    
+        to{
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes zoomout {
+        from{
+            transform: scale(0.2);
+        }
+    
+        to{ 
+            transform: scale(1); 
+        }
+    }
+    
+    @keyframes slideinopacity {
+        from{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    
+        to{
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+    }
+    
+    @keyframes slideinopacity2 {
+        from{
+            transform: translateX(-150px);
+        }
+    
+        to{
+            transform: translateX(0); 
+        }
+    }
+    
+    
+    @keyframes slideinopacity3 {
+        from{
+            opacity: 0;
+            transform: translateY(150px);
+        }
+    
+        to{
+            opacity: 2;
+            transform: translateY(0); 
+        }
+    }
+    
+    @keyframes scale {
+        from{
+            transform:scale(1);
+        }
+    
+        to{
+            transform: scale(1.1);
+        }
+    }
+    
+    
+    @keyframes scaleout {
+        from{
+            transform:scale(1);
+        }
+    
+        to{
+            transform: scale(1.1);
+        }
+    }
+    
+    .secondpage{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #c5a888;
+        flex-direction: column;
+        
+    }
+    
+    .countdowntimer{
+        height: 40px;
+        width: 100%;
+        background-color:  #c5a888;
+        position: absolute;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        z-index: 3;   
+    }
+    
+    .packagecontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        background-color: white;
+        width: 100%;
+        height:900px;
+        flex-direction: column;
+    }
+    
+    .packagecontainer2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: white;
+        width: 100%;
+        height: 700px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .package{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .package:hover{
+        animation: secondscale 1s cubic-bezier(0, 0.5, 0.14, 0.95);
+    }
+    .package:hover{
+        opacity: 0.9;
+    }
+    
+    .package:hover p{
+        display: block;
+    }
+    
+    .firstheader{
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        background-color: rgb(113, 102, 81);
+        z-index: 2;
+        animation-play-state: paused;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        overflow-x: hidden; 
+
+    }
+    
+    button {
+        width: 6px;
+        height: 10px;
+        background-color: rgb(164, 149, 117); 
+        color: white; /* White text */
+        border: none; /* No border */
+        border-radius: 5px; 
+        cursor: pointer; 
+        text-align: center; 
+        text-decoration: none; 
+        transition: background-color 0.3s; 
+        font-size: 10px;
+        overflow: hidden;
+    }
+
+    
+    /* Hover style */
+    button:hover {
+        background-color: rgb(23, 21, 17); /* Darker green background on hover */
+    }
+    
+    .beginner{
+        width: 100%;
+        height: 20px;
+        background-color: red;
+    }
+    
+    span{
+        color: rgb(255, 255, 255);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+       text-shadow: 1px 1px 10px black;
+       z-index: 2;
+    }
+    
+    .CONTAINERCONTAINER{
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .pickaclass{
+        background-color: #995448;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        color: rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        z-index: 2;
+    }
+    
+    .joinaclass{
+        width: 100%;
+        color: rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        background-color: #995448;
+        height: 200px;
+        text-align: justify;
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        padding-left: 80px;
+        font-style: italic;
+        font-weight: bold;
+        padding-left: 0px;
+        animation: slideinopacity 1s cubic-bezier(0, 0.5, 0.14, 0.95);
+    }
+    
+    
+    
+    .navpart{
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        margin-right: 9px;
+        color: white;
+        font-weight: bold;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+    
+    .firstheader h5 {
+        color: wheat;
+        margin-left: 9px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        width: 240px;
+      }
+      
+      .headerinfo {
+        color: white;
+        font-family: "Dancing Script", cursive;
+        font-size: 15px;
+      }
+
+      nav{
+        width: 100%;
+      }
+    
+    nav a{
+        color: white;
+        text-decoration: none;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    
+    
+    nav a:hover {
+        color: rgb(23, 21, 17); /* Darker green background on hover */
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .buttons {
+        text-align: center;
+        display: flex;
+        gap: 2px;
+        
+    }
+    
+    
+    
+    input, button {
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    button {
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        height: 40px;
+        width: 90px;
+    }
+    
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    
+    .footerbottom{
+        display: block;
+    }
+    
+    footer{
+        width: 100%;
+        height: 200px;
+        z-index: 2;
+    }
+    
+    /* Footer Styles */
+    footer {
+        color: black;
+        padding: 20px 0;
+      }
+    
+      
+      .footer-bottom {
+        text-align: center;
+        margin-top: 90px;
+        font-size: 9px;
+      }
+      
+      .footer-bottom pre {
+        margin: 0;
+      }
+  }
+  
+
+
+
 
 
 
