@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href = "README.css"></link>
+    <link rel="stylesheet" href="README.css"></link>
   </head>
   <body>
   <div>
