@@ -1,5 +1,6 @@
 <html>
   <div>
-    <h1 style = "color: red; font-weight: bold;" >This is Samantha's Project</h1>
+    <h1>WELCOME..</h1>
+    <p>This is Samantha's Project</p>
   </div>
 </html>
