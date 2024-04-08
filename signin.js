@@ -19,13 +19,14 @@ document.getElementById('signinForm').addEventListener('submit', function(event)
             // Authentication successful
             document.getElementById('signinMessage').innerText = 'Login successful!';
             // Show notification
-            showNotification('Login Successful', 'Welcome back, ' + username + '!');
+            alert('Login Successful, Welcome back, ' + username + '!');
             setTimeout(function() {
                 window.location.href = 'index.html';
-            }, 2000);
+            }, 1000);
         } else {
             // Authentication failed
             document.getElementById('signinMessage').innerText = 'Login failed. Incorrect username or password.';
+            alert('Login Failed');
         }
     } else {
         // No users found in localStorage

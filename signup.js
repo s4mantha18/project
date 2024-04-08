@@ -27,9 +27,12 @@ function handleFormSubmission(event) {
     
     // Display a message or perform any other actions as needed
     document.getElementById('signupMessage').innerText = 'Sign up successful!';
-    setTimeout(function() {
-        window.location.href = 'index.html';
-    }, 2000);
+    alert('Sign up Successful!');
+    // setTimeout(function() {
+    //     window.location.href = 'index.html';
+    // }, 1000);
+
+    
     
     // For demonstration purposes, log the users array
     console.log(users);
